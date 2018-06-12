@@ -1,0 +1,19 @@
+Answer 1-
+class Java
+{
+public static void main(String args[])
+{
+System.out.println("hello");
+}
+}
+
+
+
+Answer 2-
+class Java
+{
+public static void main(String args[])
+{
+System.out.println("simranpreet singh");
+}
+}
