@@ -1,0 +1,129 @@
+answer 1-
+class Java
+{
+public static void main(String args[])
+{
+int a,b,sum;
+a=10;
+b=20;
+sum=a+b;
+System.out.println("addition is"+sum);
+}
+}
+
+answer 2-class Java
+{
+public static void main(String args[])
+{
+int year;
+year=1999;
+if(year%4==0)
+{System.out.println("leap year");
+}
+else
+{System.out.println("not leap year");
+}
+}
+}
+
+
+
+answer 3 -
+class Java 
+{
+public static void main(String args[])
+{
+int r,c;
+for(r=0;r<=5;r++){
+  for(c=0;c<=r;c++){
+    System.out.print("*");
+}
+System.out.println(" ");
+}
+}
+}
+
+
+
+answer 4-
+class Bigger
+{
+    public static void main(String args[])
+    {
+     int a,b,c;
+     a=3;
+     b=6;
+     c=1;
+     if(a>b && a>c)
+     {System.out.println("a is greatest");}
+     else if(b>a && b>c)
+     {System.out.println("b is greatest");}
+     else
+     {System.out.print("c is greast");}
+   }
+}
+
+
+answer 5-
+
+class Pali
+{
+public static void main(String args[])
+{
+int a,b,c,d;
+a=191;
+b=a/100;
+c=(a/10)-(b*10);
+d=(a-(b*100))-(c*10);
+if(b==d)
+{
+System.out.println("num is palindrome");
+}
+else
+{
+System.out.print("num is not palindrome");
+}
+}
+}
+
+answer 6-
+class Prime
+{
+public static void main(String args[])
+{
+int n,c,r;
+n=5;
+for(c=2;c<n-1;c++)
+{
+if(n%c==0)
+{
+System.out.print("no. is not prime");
+}
+else
+{
+System.out.print("no. is prime");
+}
+}
+}
+}
+
+
+answer 7-
+
+class Reverse
+{
+public static void main(String args[])
+{
+int a,remainder,reverse=0;
+a=654;
+while(a != 0)
+{
+remainder=a%10;
+reverse=reverse*10+remainder;
+a=a/10;
+}
+System.out.println("reverse is="+reverse);
+}
+}
+
+
