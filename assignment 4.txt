@@ -1,0 +1,106 @@
+answer 1 -
+
+package Rectangle;
+ class Rectangle{
+    double length;
+    double width;
+    Rectangle (double length , double width){
+    this.length=length;
+    this.width=width;
+}
+   public void calculatearea()
+            {System.out.println("area is"+length*width);
+            }
+      public static void main(String args[]){
+        Rectangle rectangle=new Rectangle(4.0,5.0);
+        rectangle.calculatearea();
+    }
+
+            }
+
+answer 2-
+
+ 
+package complex;
+public class Complex {
+    int real;
+    int imagnary;
+    Complex(int real,int imagnary){
+    this.real=real;
+    this.imagnary=imagnary;}
+            
+    public void display(){
+        System.out.println(real+"+i"+imagnary);
+  
+    
+}
+
+    
+    public static void main(String[] args) {
+        Complex obj = new Complex(4,5);
+        obj.display();
+    }
+}
+
+
+answer 3 -
+
+package secondlarger;
+
+import java.util.Scanner;
+public class Secondlarger {
+
+   
+    public static void main(String[] args) {
+        int n,temp;
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter size of array");
+        n = s.nextInt();
+        int a[] = new int[n];
+        
+        System.out.println("Enter all the elements:");
+        for (int i = 0; i < n; i++) 
+        {
+            a[i] = s.nextInt();
+        }
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = i + 1; j < n; j++) 
+            {
+                if (a[i] > a[j]) 
+                {
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+        System.out.println("second largest element is"+a[n-2]);
+        
+        }
+        
+    }
+        
+    
+answer 4 -
+
+package waveform;
+
+public class Waveform {
+
+    public static void main(String[] args) {
+        
+        int temp;
+        int arr[]={1,2,3,4,5,6,7,8,9,10};
+        int i=0;
+        while(i<=8){
+            temp=arr[i];
+        arr[i]=arr[i+1];
+        arr[i+1]=temp;
+        i=i+2;}
+        for(i=0;i<9;i++){
+            System.out.println(arr[i]+",");
+        }
+        System.out.println(arr[9]);
+    }
+}
