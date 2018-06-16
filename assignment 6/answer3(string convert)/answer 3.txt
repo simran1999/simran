@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package stringcovert;
+class Max{
+     int a= Integer.parseInt("6");
+      int b= Integer.parseInt("9");
+      public void compaire(){
+          if (a>b){
+              System.out.println("a is greater");}
+                      else{
+                      System.out.println("b is greater");   
+                          }
+          
+      }
+}
+
+
+public class Stringcovert {
+    
+public static void main(String[] args) {
+     Max s = new Max();
+     s.compaire();
+        
+    }
+    
+}
