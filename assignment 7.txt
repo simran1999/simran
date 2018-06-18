@@ -1,0 +1,120 @@
+answer 1-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package reversestring;
+public class Reversestring {
+
+    public static void main(String[] args) {
+        String str = "abcd";
+        for(int i=str.length()-1;i>=0;i--)
+        {
+            char c=str.charAt(i);
+        
+        System.out.print(c);
+                
+    }
+    
+}}
+
+
+answer 2-
+
+package allsub;
+public class Allsub {
+
+    
+    public static void main(String[] args) {
+        String a ="xyz";
+        
+        for(int i=0;i<a.length();i++)
+        {
+            for(int j=i+1;j<=a.length();j++){
+                String b = a.substring(i,j);
+                System.out.println(b);
+            }
+        }
+        
+        
+      
+        
+    }
+    
+}
+
+answer 3-
+
+package removevowels;
+
+
+public class Removevowels{
+    public static void main(String[] args) {
+        char m='a';
+                char n='e';
+                char p='i';
+                char q='o';
+                char r='u';
+        
+        String s = "simranpreet" ;
+        for(int i=0;i<s.length();i++){
+            char c = s.charAt(i);
+            if(c==m || c==n || c==p || c==q || c==r){
+                String replace = s.replace(c,'\0');
+                System.out.println(replace);
+                
+            }
+        }
+        
+    }
+    
+}
+
+Answer 4-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package npattern;
+public class Npattern {
+
+    
+    public static void main(String[] args) {
+        char c=97;
+        for(int i=0;i<3;i++){
+            c=97;
+            for(int j=0;j<=i;j++){
+                System.out.print(c);
+                c++;
+            }
+            System.out.println("");
+        }
+        }
+        
+    }
+    
+
+answer 5-
+
+package stringoccurence;
+import java.util.Scanner;
+public class Stringoccurence {
+    public static void main(String[] args) {
+        System.out.print("enter first string");
+        Scanner c=new Scanner(System.in);
+        String str1=c.next();
+        System.out.println("enter second string");
+        String str2=c.next();
+        if(str1.contains(str2)){
+        {System.out.print("yes str1 contain str2");}}
+        else
+        {System.out.print("no str1 not contain str2");}
+        }
+    }
+    
+
+
+
+
