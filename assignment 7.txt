@@ -114,7 +114,22 @@ public class Stringoccurence {
         }
     }
     
+answer 7-
 
-
+package countwords;
+import java.util.Scanner;
+public class Countwords{
+    public static void main(String args[]){
+        int count=0;
+        System.out.println("enter sentence");
+        Scanner sen=new Scanner(System.in);
+        String sentence = sen.nextLine();
+        for(int i=0;i<sentence.length();i++){
+            if(sentence.charAt(i)==' '){
+                count=count+1;}
+            System.out.println(count+1);
+            }
+        }
+    }
 
 
