@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package readandwritefile;
+import java.io.*;
+public class Readandwritefile {
+
+  
+    public static void main(String[] args) throws IOException {
+       File f1=new File("C:\\Users\\jaswinder\\Desktop\\New Text Document.txt");
+       File f2=new File("C:\\Users\\jaswinder\\Desktop\\New Text Document (2).txt");
+      FileReader in=new FileReader(f1);
+      FileWriter out=new FileWriter(f2,true);
+      int c;
+      while((c=in.read())!=-1){
+          out.write(c);}
+          out.close();//untill here content of 1st file written in 2nd file
+      FileReader xy=new FileReader(f2);
+      int m;
+      while((m=xy.read())!=-1){
+          System.out.println(""+(char)m);//for print content of 2nd file that is text document(2).txt 
+          
+      }
+      
+    }
+    
+}
