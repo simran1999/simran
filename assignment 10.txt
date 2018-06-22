@@ -1,0 +1,22 @@
+anser 1-
+package dyanamiarray;
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.ArrayList;
+class DyanamiArray {
+    ArrayList ar;
+    int size;
+    public DyanamiArray(int size){
+        this.size=size;
+        ar=new ArrayList(4);
+        ar.add(1);
+        ar.ensureCapacity(size*2);
+    }}
+
+     class abcd{
+    public static void main(String[] args) throws Exception {
+        
+        DyanamiArray obj=new DyanamiArray(4);
+    }
+    
+}
