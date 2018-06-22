@@ -1,0 +1,51 @@
+answer 1-
+
+package intersection;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Iterator;
+public class Intersection {
+
+    
+    public static void main(String[] args) {
+        HashSet set1=new HashSet();
+        set1.add("s");
+        set1.add("i");
+        set1.add("m");
+        set1.add("r");
+        set1.add("a");
+        set1.add("n");
+        HashSet set2=new HashSet();
+        set2.add("p");
+        set2.add("i");
+        set2.add("m");
+        set1.retainAll(set2);
+        System.out.print(set1);
+        
+    }
+    
+}
+
+
+answer 2-
+
+package keyassociatevalue;
+import java.util.Map;
+import java.util.HashMap;
+public class Keyassociatevalue {
+    public static void main(String[] args) {
+        
+        HashMap obj=new HashMap();
+        obj.put("car",100);
+        obj.put("bike",50);
+        obj.put("cycle",20);
+        obj.replace("car", 100, 200);
+        System.out.print(obj);
+    }
+    
+}
+
+
+
+
+
