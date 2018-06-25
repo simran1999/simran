@@ -1,0 +1,63 @@
+\\extra program of use of comparable
+package compareble;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author jaswinder
+ */
+public class Compareble {
+     public static void main(String args[]){
+         Movies obj1=new Movies(2007,5,"fhg");
+         Movies obj2=new Movies(2008,6,"gg");
+         Movies obj3=new Movies(2009,8,"hu");
+         Movies obj4=new Movies(2010,4,"hjh");
+         
+         ArrayList list =new ArrayList();
+        list.add(obj1);
+        list.add(obj2);
+        list.add(obj3);
+        list.add(obj4);
+     }
+         
+     
+    }
+    
+
+\\2nd class movie
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package compareble;
+
+/**
+ *
+ * @author jaswinder
+ */
+class Movies implements Comparable{
+    int year;
+    int rating;
+    String moviename;
+    Movies(int year,int rating,String movie){
+        this.year=year;
+        this.rating=rating;
+        this.moviename=moviename;
+        
+        
+        
+    }
+
+    @Override
+    public int compareTo(Movies t) {
+        
+    return  this.moviename-t.moviename;
+    }
+    
+}
+
+
+
+
