@@ -52,8 +52,125 @@ class Movies implements Comparable<Movies> {
      }
       }
        
-     
-         
+answer 2-
+
+package genericsort;
+
+import java.util.Arrays;
+
+public class Genericsort {
+
+   
+      static  <T> void sortArray(T array[]){
+      Arrays.sort(array);
+      System.out.print( Arrays.toString(array));
+    }
+      
+      public static void main(String args[])
+       {
+           Character array1[]={'s','i','m','r','a','n'};
+    Integer array2[]={2,4,5,6,5,4,3,5,};
+    sortArray(array1);
+    System.out.println(" ");
+    sortArray(array2);
+    Arrays.sort(array1);
+}
+        
+ 
+    }
+
+answer3-     
+
+package arraygenric;
+public class Arraygenric {
+
+    
+    
+      static  <T> void printArray(T array[]){
+        for(T var:array){
+            System.out.print(" "+var);
+        }
+    }
+      
+      public static void main(String args[])
+       {
+           Character array1[]={'s','i','m','r','a','n'};
+    Integer array2[]={2,4,5,6,5,4,3,5,};
+    printArray(array1);
+    System.out.println(" ");
+    printArray(array2);
+}
+}
+
+answer 4-
+
+package agenamesort;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+ class students <students> {
+     int age;
+     String name;
+     students(int ages,String names){
+         this.age=ages;
+         this.name=names;
+     }
+
+   
+   
+ }
+    
+  class Agenamesort{
+    public static void main(String[] args) {
+       ArrayList<students> list=new ArrayList<students>();
+       list.add(new students(18,"ram"));
+       list.add(new students(17,"sham"));
+       list.add(new students(21,"abcd"));
+       list.add(new students(16,"bcd"));
+       System.out.println("unsorted list is-");
+       for(students s1:list){
+           System.out.println(s1.age+" "+
+                   s1.name);
+       }
+   //    System.out.println("sorted based on age-");//sorting acccording age
+     //  agecompare a=new agecompare();
+       //Collections.sort(list,a);
+   //  for(students s1:list){
+     //      System.out.println(s1.age+" "+
+       //            s1.name);
+           
+           System.out.println("sorted based on name-");//sorting according namess
+            namecompare b=new namecompare();
+              Collections.sort(list,b);
+     for(students s1:list){
+           System.out.println(s1.age+" "+
+                   s1.name);
+           
+    
+}
+  }}
+
+ class agecompare implements Comparator<students>{
+
+    @Override
+    public int compare(students t, students t1) {
+        if(t.age<t1.age) return -1;
+        if(t.age>t1.age) return 1;
+        else return 0;
+    }
+    
+}
+ class namecompare implements Comparator<students>{
+
+    @Override
+    public int compare(students t, students t1) {
+        return t.name.compareTo(t1.name);
+    }
+
+}         
 
      
+
+
+
 
