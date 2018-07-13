@@ -20,3 +20,85 @@ class DyanamiArray {
     }
     
 }
+
+
+answer2-(mini project)-
+
+ package practice4;
+import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+ 
+ class Practice4 
+
+{    
+
+     static void RecursivePrint(File[] arr,int index,int level,String str2) throws FileNotFoundException, IOException 
+     {
+         
+    
+    
+    FileWriter f3=new FileWriter(str2,true);
+    
+         // terminate condition
+         if(index == arr.length)
+             return;
+          
+         
+         for (int i = 0; i < level; i++)
+             System.out.print("\t");
+          
+         // for files
+         if(arr[index].isFile())
+             f3.write(arr[index].getName()+System.getProperty("line.separator"));
+             
+          
+         // for sub-directories
+         else if(arr[index].isDirectory())
+         {
+             System.out.println("[" + arr[index].getName() + "]");
+              f3.write("[" + arr[index].getName() + "]"+System.getProperty("line.separator"));
+             // recursion for sub-directories
+             RecursivePrint(arr[index].listFiles(), 0, level + 1,str2);
+         }
+           
+         // recursion for main directory
+         RecursivePrint(arr,++index, level,str2);
+         f3.close();
+    }
+     
+    // Driver Method
+    public static void main(String[] args) throws FileNotFoundException, IOException
+    { FileReader a=new FileReader("C:\\Users\\jaswinder\\Desktop\\abc (2).txt");
+    BufferedReader b= new BufferedReader(a);
+    String str=b.readLine();//str is first line ( path of required directry )written in text file abc(2).
+    String str2=b.readLine();//str2 is a second line (path of text file where we want to write all name of files in directory)written in abc(2). 
+//    
+//         Provide full path for directory(change accordingly)  
+//      String maindirpath = "C:\\Users\\jaswinder\\Desktop\\project";
+           //    String maindirpath= new String (str);  
+//               System.out.print(maindirpath);
+        // File object
+      //  File maindir = new File(maindirpath);
+          File maindir=new File(str);
+        if(maindir.exists() && maindir.isDirectory())
+        {
+            // array for files and sub-directories 
+            // of directory pointed by maindir
+            File arr[] = maindir.listFiles();
+             
+            System.out.println("**********************************************");
+            System.out.println("Files from main directory : " + maindir);
+            System.out.println("**********************************************");
+             
+            
+           //  c.write(maindir);
+            // Calling recursive method
+            RecursivePrint(arr,0,0,str2); 
+            a.close();
+            b.close();
+       } 
+    }
+}
+
+
